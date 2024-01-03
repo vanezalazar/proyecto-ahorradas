@@ -43,6 +43,325 @@
                 </ul>
             </nav>
         </header>
+
+        <main class="p-40 w-full">
+            <div class="grid grid-cols-2 gap-4 w-full">
+                <div class="p-5 w-full">
+                    <!-- inicio de seccion balance -->
+                    <div class="shadow-2xl Flex-col w-full p-5 mb-5">
+                        <h2 class="text-neutral-600 text-3xl font-bold mb-8">
+                            Balance
+                        </h2>
+                        <div class="grid grid-cols-2 gap-8 w-full">
+                            <div>
+                                <p class="mb-5">Ganancias</p>
+                                <p class="mb-5">Gastos</p>
+                                <p class="mb-5">Total</p>
+                            </div>
+                            <div class="">
+                                <p class="text-green-500 text-center mb-5">
+                                    +$0
+                                </p>
+                                <p class="text-rose-600 text-center mb-5">
+                                    -$0
+                                </p>
+                                <p class="font-bold text-center mb-5">$0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- fin de seccion balance -->
+                    <div class="shadow-2xl p-5 flex-col w-full">
+                        <!-- inicio de sección filtros  -->
+                        <div class="flex justify-between mb-5">
+                            <h2
+                                class="text-neutral-700 font-bold text-3xl mb-8"
+                            >
+                                Filtros
+                            </h2>
+                            <a href="">Ocultar filtros</a>
+                        </div>
+
+                        <form class="flex-col" action="">
+                            <div class="flex-col mb-1.5">
+                                <label class="font-bold" for="tipes-select"
+                                    >Tipo</label
+                                >
+
+                                <select
+                                    class="block apperance-none border-2 rounded w-full p-1.5"
+                                    name="tipes"
+                                    id="tipes-select"
+                                >
+                                    <option value="todos">Todos</option>
+                                    <option value="gasto">Gasto</option>
+                                    <option value="ganancia">Ganancia</option>
+                                </select>
+                            </div>
+                            <div class="mb-2.5">
+                                <label class="font-bold" for="category-select"
+                                    >Categoria</label
+                                >
+
+                                <select
+                                    class="block apperance-none border-2 rounded w-full p-1.5"
+                                    name="category"
+                                    id="category-select"
+                                >
+                                    <option value="todas">Todas</option>
+                                    <option value="comida">Comida</option>
+                                    <option value="servicios">Servicios</option>
+                                    <option value="salidas">Salidas</option>
+                                    <option value="educacion">Educación</option>
+                                    <option value="transporte">
+                                        Transporte
+                                    </option>
+                                    <option value="trabajo">Trabajo</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-2.5">
+                                <label class="font-bold" for="bills-date"
+                                    >Desde:</label
+                                >
+                                <input
+                                    class="block apperance-none border-2 rounded w-full p-1.5"
+                                    type="datetime-local"
+                                    id="bills-date"
+                                    name="bills-date"
+                                />
+                            </div>
+                            <div class="mb-2.5">
+                                <label class="font-bold" for="order-select"
+                                    >Ordenar por</label
+                                >
+                                <select
+                                    class="block apperance-none border-2 rounded w-full p-1.5"
+                                    name="order"
+                                    id="order-select"
+                                >
+                                    <option value="todas">Mas reciente</option>
+                                    <option value="comida">
+                                        Menos reciente
+                                    </option>
+                                    <option value="servicios">
+                                        Mayor monto
+                                    </option>
+                                    <option value="salidas">Menor monto</option>
+                                    <option value="educacion">A/Z</option>
+                                    <option value="transporte">Z/A</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- fin de sección filtros -->
+                </div>
+
+                <!-- inicio de sección operaciones -->
+                <div class="shadow-2xl p-5 w-full h-full flex-col items-center">
+                    <div class="flex justify-between mb-5">
+                        <h2 class="text-neutral-600 font-bold text-3xl">
+                            Operaciones
+                        </h2>
+                        <button
+                            class="bg-teal-300 text-neutral-100 p-1.5 rounded hover:bg-teal-500"
+                        >
+                            + Nueva Operación
+                        </button>
+                    </div>
+                    <figure class="flex justify-center shadow border">
+                        <img
+                            class="w-full"
+                            src="images/cash operations.jpg"
+                            alt="cash opeartions"
+                        />
+                    </figure>
+
+                    <p class="text-neutral-600 font-bold text-center text-2xl">
+                        Sin resultados
+                    </p>
+                    <p class="text-center">
+                        Cambia los filtros o agrega operaciones
+                    </p>
+                </div>
+                <!-- fin de sección operaciones -->
+            </div>
+
+            <!-- Inicio de sección Nueva Operación -->
+            <div class="shadow-2xl p-5 w-full h-full flex-col">
+                <h2 class="text-neutral-600 font-bold text-3xl mb-8">
+                    Nueva Operación
+                </h2>
+                <form action="">
+                    <div class="mb-5">
+                        <label class="font-bold" id="">Descripción</label>
+                        <div class="">
+                            <input
+                                class="block apperance-none border-2 rounded w-full p-1.5"
+                                type="text"
+                                id=""
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label class="label font-bold" id="">Monto</label>
+                        <div class="">
+                            <input
+                                class="block apperance-none border-2 rounded w-full p-1.5"
+                                type="number"
+                                id=""
+                                value="0"
+                            />
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label class="label font-bold" id="">Tipo</label>
+                        <div class="w-full">
+                            <select
+                                class="block apperance-none border-2 rounded w-full p-1.5"
+                            >
+                                <option>Gasto</option>
+                                <option>Ganancia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label class="label font-bold" id="">Categoría</label>
+                        <div class="">
+                            <select
+                                class="block apperance-none border-2 rounded w-full p-1.5"
+                            >
+                                <option>Comida</option>
+                                <option>Servicios</option>
+                                <option>Educación</option>
+                                <option>Transporte</option>
+                                <option>Trabajo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label class="label font-bold" id="">Fecha</label>
+                        <div class="control">
+                            <input class="input w-full" type="date" id="" />
+                        </div>
+                    </div>
+                    <div class="flex justify-end">
+                        <button
+                            class="bg-slate-50 p-1.5 rounded hover:bg-slate-200 m-1"
+                        >
+                            Cancelar
+                        </button>
+                        <button
+                            class="bg-teal-300 text-neutral-100 p-1.5 rounded hover:bg-teal-500 m-1"
+                        >
+                            Agregar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- Fin de seccion Nueva Operación -->
+
+            <!-- Inicio de Seccion Categorías -->
+            <div class="shadow-2xl p-5 w-full h-full flex-col">
+                <h2 class="text-neutral-600 font-bold text-3xl mb-8">
+                    Categorías
+                </h2>
+                <div class="mb-8">
+                    <label
+                        class="font-bold w-full block"
+                        for="input-name-category"
+                        >Nombre</label
+                    >
+                    <div class="flex justify-between w-full mb-5">
+                        <div class="w-full">
+                            <input
+                                class="block apperance-none border-2 rounded w-full p-1.5"
+                                type="text"
+                                id="input-name-category"
+                            />
+                        </div>
+                        <div class="">
+                            <button
+                                class="bg-teal-300 text-neutral-100 p-1.5 rounded hover:bg-teal-500 ml-2"
+                            >
+                                Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="columns-2 mb-5">
+                        <div class="columns-1">
+                            <span class="text-emerald-600">Comida</span>
+                        </div>
+                        <div class="columns-2 flex justify-end">
+                            <a class="mx-4" href="">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="columns-2 mb-5">
+                        <div class="columns-1">
+                            <span class="text-emerald-600">Servicios</span>
+                        </div>
+                        <div class="columns-2 flex justify-end">
+                            <a href="" class="mx-4">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="columns-2 mb-5">
+                        <div class="columns-1">
+                            <span class="text-emerald-600">Salidas</span>
+                        </div>
+                        <div class="columns-2 flex justify-end">
+                            <a href="" class="mx-4">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="columns-2 mb-5">
+                        <div class="columns-1">
+                            <span class="text-emerald-600">Educación</span>
+                        </div>
+                        <div class="columns-2 flex justify-end">
+                            <a href="" class="mx-4">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="columns-2 mb-5">
+                        <div class="columns-1">
+                            <span class="text-emerald-600">Transporte</span>
+                        </div>
+                        <div class="columns-2 flex justify-end">
+                            <a href="" class="mx-4">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                    <div class="columns-2 mb-5">
+                        <div class="columns-1">
+                            <span class="text-emerald-600">Trabajo</span>
+                        </div>
+                        <div class="columns-2 flex justify-end">
+                            <a href="" class="mx-4">Editar</a>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de sección Categorías -->
+
+            <!-- Sección Reportes  -->
+            <div class="shadow-2xl p-5 w-full h-full flex-col w-3/12">
+                <h2 class="text-neutral-600 font-bold text-3xl mb-8">
+                    Reportes
+                </h2>
+                <figure class="flex justify-center">
+                    <img class="w-1/2" src="images/reports-image.jpg" />
+                </figure>
+                <h4 class="text-neutral-600 text-center text-2xl">
+                    Operaciones insuficientes
+                </h4>
+                <p class="text-center">Prueba agregando más operaciones</p>
+            </div>
+        </main>
         <script src="Javascript/main.js"></script>
     </body>
 </html>
