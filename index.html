@@ -14,7 +14,7 @@
         ></script>
     </head>
     <body>
-        <!-- inicio de header -->
+        <!-- inicio de Header -->
         <header class="w-full flex bg-teal-400 text-neutral-50">
             <a
                 class="text-4xl font-bold flex m-4 hover:bg-teal-500 p-1.5 rounded"
@@ -24,18 +24,27 @@
             <nav class="flex grow justify-between">
                 <ul class="flex items-end justify-end w-1/2 m-auto">
                     <li class="m-5">
-                        <a class="hover:bg-teal-500 p-1.5 rounded" href="#"
+                        <a
+                            id="balance"
+                            class="hover:bg-teal-500 p-1.5 rounded"
+                            href="#"
                             ><i class="fa-solid fa-chart-line mr-1.5"></i
                             >Balance</a
                         >
                     </li>
                     <li class="m-5">
-                        <a class="hover:bg-teal-500 p-1.5 rounded" href="#"
+                        <a
+                            id="categories"
+                            class="hover:bg-teal-500 p-1.5 rounded"
+                            href="#"
                             ><i class="fa-solid fa-tag mr-1.5"></i>Categorías</a
                         >
                     </li>
                     <li class="m-5">
-                        <a class="hover:bg-teal-500 p-1.5 rounded" href="#"
+                        <a
+                            id="reports"
+                            class="hover:bg-teal-500 p-1.5 rounded"
+                            href="#"
                             ><i class="fa-solid fa-chart-pie mr-1.5"></i
                             >Reportes</a
                         >
@@ -47,8 +56,11 @@
         <main class="p-40 w-full">
             <div class="grid grid-cols-2 gap-4 w-full">
                 <div class="p-5 w-full">
-                    <!-- inicio de seccion balance -->
-                    <div class="shadow-2xl Flex-col w-full p-5 mb-5">
+                    <!-- Inicio de seccion Balance -->
+                    <div
+                        id="balance-section"
+                        class="shadow-2xl Flex-col w-full p-5 mb-5"
+                    >
                         <h2 class="text-neutral-600 text-3xl font-bold mb-8">
                             Balance
                         </h2>
@@ -69,9 +81,12 @@
                             </div>
                         </div>
                     </div>
-                    <!-- fin de seccion balance -->
-                    <div class="shadow-2xl p-5 flex-col w-full">
-                        <!-- inicio de sección filtros  -->
+                    <!-- Fin de sección Balance -->
+                    <div
+                        id="filters-section"
+                        class="shadow-2xl p-5 flex-col w-full"
+                    >
+                        <!-- Inicio de sección Filtros  -->
                         <div class="flex justify-between mb-5">
                             <h2
                                 class="text-neutral-700 font-bold text-3xl mb-8"
@@ -153,16 +168,20 @@
                             </div>
                         </form>
                     </div>
-                    <!-- fin de sección filtros -->
+                    <!-- Fin de sección Filtros -->
                 </div>
 
-                <!-- inicio de sección operaciones -->
-                <div class="shadow-2xl p-5 w-full h-full flex-col items-center">
+                <!-- Inicio de sección Operaciones -->
+                <div
+                    id="operations-section"
+                    class="shadow-2xl p-5 w-full h-full flex-col items-center"
+                >
                     <div class="flex justify-between mb-5">
                         <h2 class="text-neutral-600 font-bold text-3xl">
                             Operaciones
                         </h2>
                         <button
+                            id="new-operation-btn"
                             class="bg-teal-300 text-neutral-100 p-1.5 rounded hover:bg-teal-500"
                         >
                             + Nueva Operación
@@ -183,11 +202,14 @@
                         Cambia los filtros o agrega operaciones
                     </p>
                 </div>
-                <!-- fin de sección operaciones -->
+                <!-- Fin de sección Operaciones -->
             </div>
 
             <!-- Inicio de sección Nueva Operación -->
-            <div class="hidden shadow-2xl p-5 w-full h-full flex-col">
+            <div
+                id="new-operation-section"
+                class="hidden shadow-2xl p-5 w-full h-full flex-col"
+            >
                 <h2 class="text-neutral-600 font-bold text-3xl mb-8">
                     Nueva Operación
                 </h2>
@@ -260,8 +282,11 @@
             </div>
             <!-- Fin de seccion Nueva Operación -->
 
-            <!-- Inicio de Seccion Categorías -->
-            <div class="hidden shadow-2xl p-5 w-full h-full flex-col">
+            <!-- Inicio de seccion Categorías -->
+            <div
+                id="categories-section"
+                class="hidden shadow-2xl p-5 w-full h-full flex-col"
+            >
                 <h2 class="text-neutral-600 font-bold text-3xl mb-8">
                     Categorías
                 </h2>
@@ -349,7 +374,10 @@
             <!-- Fin de sección Categorías -->
 
             <!-- Sección Reportes  -->
-            <div class="hidden shadow-2xl p-5 w-full h-full flex-col w-3/12">
+            <div
+                id="reports-section"
+                class="hidden shadow-2xl p-5 w-full h-full flex-col w-3/12"
+            >
                 <h2 class="text-neutral-600 font-bold text-3xl mb-8">
                     Reportes
                 </h2>
